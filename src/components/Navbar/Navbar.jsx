@@ -1,38 +1,43 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("Menu");
   return (
     <>
       <div className="navbar">
         <img src={assets.logo} alt="" className="logo" />
         <ul className="navbar-menu">
-          <li
+          <Link
+            to="/"
             onClick={() => setMenu("Home")}
             className={menu === "Home" ? "active" : ""}
           >
             Home
-          </li>
-          <li
+          </Link>
+          <a
+            href="#explore-menu"
             onClick={() => setMenu("Menu")}
             className={menu === "Menu" ? "active" : ""}
           >
             Menu
-          </li>
-          <li
+          </a>
+          <a
+            href="#app-downloads"
             onClick={() => setMenu("Mobile App")}
             className={menu === "Mobile App" ? "active" : ""}
           >
             Mobile App
-          </li>
-          <li
+          </a>
+          <a
+            href="#footer"
             onClick={() => setMenu("Contact")}
             className={menu === "Contact" ? "active" : ""}
           >
             Contact
-          </li>
+          </a>
         </ul>
         <div className="navbar-right">
           <img src={assets.search_icon} alt="" />
@@ -40,7 +45,7 @@ const Navbar = () => {
             <img src={assets.basket_icon} alt="" />
             <div className="dot"></div>
           </div>
-          <button>Sign up</button>
+          <button onClick={() => setShowLogin(true)}>Sign up</button>
         </div>
       </div>
     </>

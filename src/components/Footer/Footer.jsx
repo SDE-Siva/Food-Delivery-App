@@ -10,7 +10,7 @@ const Footer = () => {
           <img src={assets.logo} alt="" />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
-            fuga dignissimos excepturi alias, dolorum commodi vitae sit velit
+            fuga dignissimos except alias, dolorum commodi vitae sit velit
             aspernatur numquam quasi! Cumque, pariatur placeat. Impeditas
             pernatur numquam quasi! Cumque, pariatur placeat. Impedit.
           </p>
